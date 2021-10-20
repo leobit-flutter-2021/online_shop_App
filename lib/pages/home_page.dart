@@ -17,6 +17,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget getBody() {
-    return Text("Dorou");
+    return const Text("Dorou");
   }
 }

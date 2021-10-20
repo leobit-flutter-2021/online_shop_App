@@ -3,6 +3,7 @@ import 'pages/main_widget.dart';
 
 void main() {
   runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: MainWidget(),
   ));
 }

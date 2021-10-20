@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop_app/pages/account_page.dart';
 import 'home_page.dart';
 
 class MainWidget extends StatefulWidget {
@@ -25,15 +26,17 @@ class _MainWidgetState extends State<MainWidget> {
   Widget getBody() {
     return IndexedStack(
       index: currentScreenIndex,
-      children: [
+      children: const [
         HomePage(),
+        AccountPage(),
+        AccountPage(),
       ],
     );
   }
 
   getAppBar() {
     switch (currentScreenIndex) {
-      case 0:
+    case 0:
         return null;
       case 1:
         return null;
@@ -42,10 +45,14 @@ class _MainWidgetState extends State<MainWidget> {
         return AppBar(
           elevation: 0.8,
           backgroundColor: Colors.white,
-          title: Text(
-            "ACCOUNT",
-            style: const TextStyle(color: Colors.black),
-          ),
+          title: const Center(
+              child:
+              Text(
+              "ACCOUNT",
+              style: TextStyle(color: Colors.black),
+              textAlign: TextAlign.center,
+            ),
+          )
         );
 
       default:
