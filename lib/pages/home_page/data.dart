@@ -1,3 +1,6 @@
+String topImageUrl =
+    'https://nextluxury.com/wp-content/uploads/business-professional-guys-winter-outfits-fashion-ideas.jpg';
+
 List categoriesData = [
   [
     'https://i.insider.com/5e7a34dd0c2a6239a072bfdb?width=1000&format=jpeg&auto=webp',

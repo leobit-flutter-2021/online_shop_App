@@ -47,11 +47,9 @@ class TopProposition extends StatelessWidget {
 
     return Container(
         height: screenHeight * 0.55,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                fit: BoxFit.cover,
-                image: NetworkImage(
-                    'https://nextluxury.com/wp-content/uploads/business-professional-guys-winter-outfits-fashion-ideas.jpg'))),
+                fit: BoxFit.cover, image: NetworkImage(topImageUrl))),
         alignment:
             Alignment.bottomLeft, // This aligns the child of the container
         child: Padding(
