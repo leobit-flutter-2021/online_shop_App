@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'home_page/home_page.dart';
+import 'package:online_shop_app/pages/store/cart_page.dart';
+import 'home_page.dart';
 
 class MainWidget extends StatefulWidget {
   const MainWidget({Key? key}) : super(key: key);
@@ -27,6 +28,7 @@ class _MainWidgetState extends State<MainWidget> {
       index: currentScreenIndex,
       children: [
         HomePage(),
+        CartPage(),
       ],
     );
   }
@@ -36,7 +38,14 @@ class _MainWidgetState extends State<MainWidget> {
       case 0:
         return null;
       case 1:
-        return null;
+        return AppBar(
+          elevation: 0.8,
+          backgroundColor: Colors.white,
+          title: Text(
+            "CART",
+            style: const TextStyle(color: Colors.black),
+          ),
+        );
 
       case 2:
         return AppBar(
