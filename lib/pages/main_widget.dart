@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop_app/pages/store/cart_page.dart';
-import 'home_page.dart';
+import 'package:online_shop_app/pages/home_page/home_page.dart';
+
+import 'account_page/account_page.dart';
 
 class MainWidget extends StatefulWidget {
   const MainWidget({Key? key}) : super(key: key);
@@ -27,8 +29,9 @@ class _MainWidgetState extends State<MainWidget> {
     return IndexedStack(
       index: currentScreenIndex,
       children: [
-        HomePage(),
+        const HomePage(),
         CartPage(),
+        const AccountPage(),
       ],
     );
   }
@@ -41,9 +44,11 @@ class _MainWidgetState extends State<MainWidget> {
         return AppBar(
           elevation: 0.8,
           backgroundColor: Colors.white,
-          title: Text(
-            "CART",
-            style: const TextStyle(color: Colors.black),
+          title: const Center(
+            child: Text(
+              "CART",
+              style: TextStyle(color: Colors.black),
+            ),
           ),
         );
 
@@ -51,9 +56,11 @@ class _MainWidgetState extends State<MainWidget> {
         return AppBar(
           elevation: 0.8,
           backgroundColor: Colors.white,
-          title: Text(
-            "ACCOUNT",
-            style: const TextStyle(color: Colors.black),
+          title: const Center(
+            child: Text(
+              "ACCOUNT",
+              style: TextStyle(color: Colors.black),
+            ),
           ),
         );
 
@@ -65,7 +72,7 @@ class _MainWidgetState extends State<MainWidget> {
   Widget getBottomNavBar() {
     List navBarItems = [
       {"icon": Icons.home, "size": 32.0},
-      {"icon": Icons.location_on_sharp, "size": 32.0},
+      {"icon": Icons.shopping_cart, "size": 32.0},
       {"icon": Icons.person, "size": 32.0}
     ];
 

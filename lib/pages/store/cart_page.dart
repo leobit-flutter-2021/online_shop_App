@@ -37,7 +37,7 @@ class _CartPageState extends State<CartPage> {
                               image: NetworkImage(cartList[index]['img']),
                               fit: BoxFit.cover)),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Column(
@@ -47,7 +47,7 @@ class _CartPageState extends State<CartPage> {
                           cartList[index]['name'],
                           style: TextStyle(fontSize: 22),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -55,26 +55,26 @@ class _CartPageState extends State<CartPage> {
                           style: TextStyle(
                               fontSize: 13, color: black.withOpacity(0.7)),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
                           cartList[index]['size'],
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 22,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 40,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(cartList[index]['price'],
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 22,
                                 )),
-                            SizedBox(
+                            const SizedBox(
                               width: 20,
                             ),
                           ],
@@ -84,7 +84,7 @@ class _CartPageState extends State<CartPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
@@ -93,14 +93,14 @@ class _CartPageState extends State<CartPage> {
         Divider(
           color: grey.withOpacity(0.8),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Padding(
           padding: const EdgeInsets.only(left: 30, right: 30),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children: const [
               Text(
                 "Delivery",
                 style: TextStyle(fontSize: 16),
@@ -112,7 +112,7 @@ class _CartPageState extends State<CartPage> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Padding(
@@ -125,7 +125,7 @@ class _CartPageState extends State<CartPage> {
             child: Center(
               child: Text(
                 "Buy this".toUpperCase(),
-                style: TextStyle(color: white, fontWeight: FontWeight.bold),
+                style: const TextStyle(color: white, fontWeight: FontWeight.bold),
               ),
             ),
           ),
