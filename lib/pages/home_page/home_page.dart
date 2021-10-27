@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:online_shop_app/pages/home_page/widgets.dart';
 import 'package:online_shop_app/pages/home_page/data.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -53,7 +48,7 @@ class TopProposition extends StatelessWidget {
         alignment:
             Alignment.bottomLeft, // This aligns the child of the container
         child: Padding(
-            padding: EdgeInsets.fromLTRB(35, screenHeight * 0.42, 0,
+            padding: EdgeInsets.fromLTRB(35, screenHeight * 0.36, 0,
                 0), //some spacing to the child from bottom
             child: InkWell(
               onTap: () {},
