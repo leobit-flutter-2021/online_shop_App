@@ -82,7 +82,7 @@ Widget getBottomNavBar(currentScreenIndex, context) {
     {"icon": Icons.person, "size": 32.0}
   ];
 
-  List bodyWidgets = [
+  List pages = [
     const FullHomePage(),
     const FullCartPage(),
     const FullAccountPage(),
@@ -108,10 +108,9 @@ Widget getBottomNavBar(currentScreenIndex, context) {
                       : Colors.black,
                 ),
                 onPressed: () {
-                  Navigator.pop(context);
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => bodyWidgets[index]),
+                    MaterialPageRoute(builder: (context) => pages[index]),
                   );
                 });
           })),
